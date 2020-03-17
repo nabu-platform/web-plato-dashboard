@@ -1,0 +1,8 @@
+{
+    "name": "web-plato-dashboard--theme--elements",
+	"resources": {
+        "foobar.scss": {
+            "url": "foobar.scss"
+        }
+    }
+}

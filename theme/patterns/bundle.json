@@ -1,0 +1,8 @@
+{
+    "name": "web-plato-dashboard--theme--patterns",
+	"resources": {
+        "menu-top.scss": {
+            "url": "menu-top.scss"
+        }
+    }
+}

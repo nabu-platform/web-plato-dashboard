@@ -28,6 +28,16 @@
                 "type": "bundle",
                 "url": "https://raw.githubusercontent.com/nabu-platform/web-plato/master/extras/page-builder-mapping/bundle.json"
             }
+        },
+        "theme": {
+            "elements.json": {
+                "type": "bundle",
+                "url": "./theme/elements/bundle.json"
+            },
+            "patterns.json": {
+                "type": "bundle",
+                "url": "./theme/patterns/bundle.json"
+            }
         }
     }
 }
