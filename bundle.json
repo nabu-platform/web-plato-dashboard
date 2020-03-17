@@ -2,7 +2,7 @@
     "name": "web-plato-dashboard",
     "version": "0.1",
 	"resources": {
-        "pre-configuration": {
+        "pre-configuration.json": {
             "type": "bundle",
             "url": "./config/pre-configuration.json"
         },
@@ -10,7 +10,7 @@
             "type": "bundle",
             "url": "https://raw.githubusercontent.com/nabu-platform/web-plato/master/tokens/color/bundle.json"
         },
-        "post-configuration": {
+        "post-configuration.json": {
             "type": "bundle",
             "url": "./config/post-configuration.json"
         },
