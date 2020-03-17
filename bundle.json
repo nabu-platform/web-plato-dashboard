@@ -16,6 +16,10 @@
             "type": "bundle",
             "url": "https://raw.githubusercontent.com/nabu-platform/web-plato/master/bundle.json",
             "excludes": ["tokens/color"]
+        },
+        "theme-mapping.json": {
+            "type": "bundle",
+            "url": "https://raw.githubusercontent.com/nabu-platform/web-plato/master/extras/theme-mapping/bundle.json"
         }
 	}
 }
