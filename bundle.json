@@ -2,24 +2,32 @@
     "name": "web-plato-dashboard",
     "version": "0.1",
 	"resources": {
-        "configuration.scss": {
-            "url": "./config/configuration.scss"
+        "pre-configuration": {
+            "type": "bundle",
+            "url": "./config/pre-configuration.json"
         },
         "web-plato-color.json": {
             "type": "bundle",
             "url": "https://raw.githubusercontent.com/nabu-platform/web-plato/master/tokens/color/bundle.json"
         },
-        "post-configuration.scss": {
-            "url": "./config/post-configuration.scss"
+        "post-configuration": {
+            "type": "bundle",
+            "url": "./config/post-configuration.json"
         },
         "web-plato.json": {
             "type": "bundle",
             "url": "https://raw.githubusercontent.com/nabu-platform/web-plato/master/bundle.json",
             "excludes": ["tokens/color"]
         },
-        "theme-mapping.json": {
-            "type": "bundle",
-            "url": "https://raw.githubusercontent.com/nabu-platform/web-plato/master/extras/theme-mapping/bundle.json"
+        "extras": {
+            "theme-mapping.json": {
+                "type": "bundle",
+                "url": "https://raw.githubusercontent.com/nabu-platform/web-plato/master/extras/theme-mapping/bundle.json"
+            },
+            "page-builder-mapping.json": {
+                "type": "bundle",
+                "url": "https://raw.githubusercontent.com/nabu-platform/web-plato/master/extras/page-builder-mapping/bundle.json"
+            }
         }
     }
 }

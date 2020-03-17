@@ -1,0 +1,26 @@
+{
+    "name": "web-plato-dashboard--post-configuration",
+	"resources": {
+        "elements": {
+            "button-base.scss": {
+                "url": "elements/button-base.scss"
+            },
+            "button-styles.scss": {
+                "url": "elements/button-styles.scss"
+            }
+        },
+        "patterns": {
+            "form-combo.scss": {
+                "url": "patterns/form-combo.scss"
+            },
+            "form-form-section.scss": {
+                "url": "patterns/form-form-section.scss"
+            }
+        },
+        "tokens": {
+            "borders.scss": {
+                "url": "tokens/borders.scss"
+            }
+        }
+    }
+}
