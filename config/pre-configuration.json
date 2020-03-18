@@ -1,11 +1,11 @@
 {
     "name": "web-plato-dashboard--pre-configuration",
 	"resources": {
-        "base-variables.scss": {
-            "url": "tokens/base-variables.scss"
-        },
         "colors.scss": {
             "url": "tokens/colors.scss"
+        },
+        "base-variables.scss": {
+            "url": "tokens/base-variables.scss"
         }
     }
 }
