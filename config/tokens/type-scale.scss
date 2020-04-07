@@ -1,0 +1,31 @@
+// ---------------------------------------------- font sizes
+
+/// Heading
+$font-color-heading: color-tint("primary", "dark") !default;
+$font-family-heading: $font-family-alt !default;
+$font-line-height-heading: 1.25 !default;
+$font-margin-heading: 1.414em 0 0.5em !default;
+$font-weight-heading: $font-weight-emphasis !default;
+
+$font-size-heading1: 2rem !default;
+$font-size-heading2: 1.5rem !default;
+$font-size-heading3: 1.25rem !default;
+$font-size-heading4: 1rem !default;
+$font-size-heading5: 0.875rem !default;
+$font-size-heading6: 0.625rem !default;
+$font-size-heading7: 0.5625rem !default;
+
+/// Subheading
+$font-color-subheading: color-tint("neutral", "dark");
+$font-family-subheading: $font-family-heading;
+$font-line-height-subheading: $font-line-height-heading;
+$font-margin-subheading: $font-margin-heading;
+$font-weight-subheading: $font-weight;
+
+$font-size-subheading1: $font-size-heading1;
+$font-size-subheading2: $font-size-heading2;
+$font-size-subheading3: $font-size-heading3;
+$font-size-subheading4: $font-size-heading4;
+$font-size-subheading5: $font-size-heading5;
+$font-size-subheading6: $font-size-heading6;
+$font-size-subheading7: $font-size-heading7;

@@ -3,6 +3,9 @@
 	"resources": {
         "menu-top.scss": {
             "url": "menu-top.scss"
+        },
+        "card.scss": {
+            "url": "card.scss"
         }
     }
 }

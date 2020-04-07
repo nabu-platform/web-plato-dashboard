@@ -1,0 +1,12 @@
+// ---------------------------------------------- dashboard cards
+#main {
+	.page-cell.is-root:not(.has-page):not(.is-plain),
+	.is-plain .data-card:not(.has-page):not(.is-plain) {
+		@extend %plato-card;
+		// title
+		.page-form h2,
+		.data-cell .data-common-header h2 {
+			@extend %sh5;
+		}
+	}
+}

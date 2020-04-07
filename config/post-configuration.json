@@ -20,6 +20,9 @@
         "tokens": {
             "borders.scss": {
                 "url": "tokens/borders.scss"
+            },
+            "type-scale.scss": {
+                "url": "tokens/type-scale.scss"
             }
         }
     }
