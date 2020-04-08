@@ -7,6 +7,9 @@
 		.page-form h2,
 		.data-cell .data-common-header h2 {
 			@extend %sh5;
+			border-bottom: $border;
+			margin: 0 calc(#{spacing("ml")} * -1) spacing("m");
+			padding: 0 spacing("ml") spacing("sm");
 		}
 	}
 }
