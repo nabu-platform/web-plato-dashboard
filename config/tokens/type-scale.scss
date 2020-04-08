@@ -16,7 +16,7 @@ $font-size-heading6: 0.625rem !default;
 $font-size-heading7: 0.5625rem !default;
 
 /// Subheading
-$font-color-subheading: color-tint("neutral", "dark");
+$font-color-subheading: $font-color;
 $font-family-subheading: $font-family-heading;
 $font-line-height-subheading: $font-line-height-heading;
 $font-margin-subheading: $font-margin-heading;

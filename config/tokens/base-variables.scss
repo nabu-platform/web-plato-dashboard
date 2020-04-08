@@ -1,11 +1,13 @@
 // ---------------------------------------------- font
+
+$font-color: $color-neutral-dark;
 $font-size-base: 0.875rem;
 $font-family: "open-sans", sans-serif;
 $font-family-alt: $font-family;
 
-$font-weight: normal !default;
-$font-weight-emphasis: bold !default;
-$font-weight-light: lighter !default;
+$font-weight: 400 !default;
+$font-weight-emphasis: 600 !default;
+$font-weight-light: 300 !default;
 
 $font-icon-family: "Font Awesome 5 Pro";
 $font-icon-size: 24px;
@@ -14,7 +16,3 @@ $font-icon-content-invalid: "\f00d";
 $font-icon-content-valid: "\f00c";
 $font-icon-content-error: "\f06a";
 $font-icon-content-success: "\f058";
-
-
-$font-color-heading: $color-primary-darker;
-$font-weight-heading: 500;
