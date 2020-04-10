@@ -1,13 +1,45 @@
 // ---------------------------------------------- menu-top
-.plato-dashboard-menu-top {
+
+$plato-dashboard-menu-top_background: $color-neutral-white !default;
+
+/// menu item 
+
+/// menu item label 
+$plato-dashboard-menu-top_item_label_color: $font-color;
+$plato-dashboard-menu-top_item_label_padding: spacing("m");
+/// menu item label - hover 
+$plato-dashboard-menu-top_item_label_hover_color: color-tint("primary", "base");
+/// menu item label - active
+$plato-dashboard-menu-top_item_label_active_color: color-tint("primary", "light");
+
+
+.plato-dashboard-menu-top, %plato-dashboard-menu-top {
+	@include layer-level($level: "low");
+	background-color: $plato-dashboard-menu-top_background;
     display: flex;
     flex-flow: row nowrap;
     margin: 0;
     padding: 0;
-    .menu-item {
-        a {
-            display: inline-block;
+    z-index: 50;
+    li, .menu_item, %plato-dashboard-menu-top_item {
+    	position: relative;
+        a, .menu_item_label, %plato-dashboard-menu-top_item_label {
+        	color: $plato-dashboard-menu-top_item_label_color;
+        	cursor: pointer;
+        	display: inline-block;
             padding: spacing("m");
+            text-decoration: none;
+            &:hover {
+            	color: $plato-dashboard-menu-top_item_label_hover_color;
+            }
+            &.active, &:focus {
+            	color: $plato-dashboard-menu-top_item_label_active_color;
+            }
         }  
+        ul, .item-children, %plato-dashboard-menu-top_item_children {
+        	display: flex;
+        	flex-flow: column nowrap;
+        	position: absolute;
+        }
     }
 }

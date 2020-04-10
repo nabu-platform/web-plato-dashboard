@@ -3,6 +3,7 @@
 	.page-cell.is-root:not(.has-page):not(.is-plain),
 	.is-plain .data-card:not(.has-page):not(.is-plain) {
 		@extend %plato-card;
+		color: $font-color;
 		// title
 		.page-form h2,
 		.data-cell .data-common-header h2 {
@@ -10,6 +11,11 @@
 			border-bottom: $border;
 			margin: 0 calc(#{spacing("ml")} * -1) spacing("m");
 			padding: 0 spacing("ml") spacing("sm");
+		}
+		.data-cell .data-common-footer .global-actions {
+			button, .button {
+				margin-bottom: 0;
+			}
 		}
 	}
 }

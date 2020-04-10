@@ -1,0 +1,93 @@
+$plato-table_background-color: transparent;
+$plato-table_margin: spacing("m") 0;
+$plato-table_width: 100%;
+/// cell
+$plato-table_cell_font-size: $font-size-small;
+$plato-table_cell_padding: spacing("sm");
+$plato-table_cell_text-transform: inherit;
+/// head 
+$plato-table_head_border: $border-light;
+$plato-table_head_color: darken($font-color, 10);
+$plato-table_head_font-weight: $font-weight-emphasis;
+/// body 
+$plato-table_body_border: $border-width-light $border-style-light $color-neutral-lighter;
+//// body - hover 
+$plato-table_body_hover_background: darken($color-neutral-lightest, 2);
+//// body - striped 
+$plato-table_body_striped_background: $color-neutral-lightest;
+//// body - actions 
+///// body - actions - label
+$plato-table_body_actions_label_color: $font-color-light;
+$plato-table_body_actions_label_font-size: $font-size-small;
+$plato-table_body_actions_label_font-weight: $font-weight-emphasis;
+$plato-table_body_actions_label_margin: 0 spacing("sm") 0 spacing("s");
+$plato-table_body_actions_label_text-transform: uppercase;
+///// body - actions - icons
+$plato-table_body_actions_icon_background: transparent;
+$plato-table_body_actions_icon_border: none;
+$plato-table_body_actions_icon_color: color-tint("primary", "base");
+
+.plato-table, %plato-table {
+	background: $plato-table_background-color;
+	margin: $plato-table_margin;
+	width: $plato-table_width;
+	tr,
+	.plato-table_row, %plato-table_row {
+		td, th,
+		.plato-table_cell, %plato-table_cell {
+			font-size: $plato-table_cell_font-size;
+			padding: $plato-table_cell_padding;
+			text-transform: $plato-table_cell_text-transform;
+		}
+	}
+	thead tr,
+	.plato-table_head .plato-table_head_row, %plato-table_head %plato-table_head_row,
+	.plato-table_head_row, %plato-table_head_row { // row in the head, with and without thead 
+		th,
+		.plato-table_head_cell, %plato-table_head_cell {
+			border-bottom: $plato-table_head_border;
+			color: $plato-table_head_color;
+			font-weight: $plato-table_head_font-weight;
+		}
+	}
+	tbody tr,
+	.plato-table_body .plato-table_body_row, %plato-table_body %plato-table_body_row,
+	.plato-table_body_row, %plato-table_body_row { // row in the body, with and without thead
+		cursor: pointer;
+		td,
+		.plato-table_body_cell, %plato-table_body_cell {
+			border-top: $plato-table_body_border;
+			&.actions, %plato-table_body_actions {
+				button {
+					&.has-icon.inline {
+						background: $plato-table_body_actions_icon_background;
+						border: $plato-table_body_actions_icon_border;
+						cursor: pointer;
+						.fa, .icon {
+							color: $plato-table_body_actions_icon_color;
+						}
+						label {
+							color: $plato-table_body_actions_label_color;
+							font-size: $plato-table_body_actions_label_font-size;
+							font-weight: $plato-table_body_actions_label_font-weight;
+							margin: $plato-table_body_actions_label_margin;
+							text-transform: $plato-table_body_actions_label_text-transform;
+						}
+					}
+				}
+			}
+		}
+		&:first-child {
+			td,
+			.plato-table_body_cell, %plato-table_body_cell {
+				border-top: none;
+			}
+		}
+		&:nth-child(even) {
+			background: $plato-table_body_striped_background;
+		}
+		&:hover {
+			background: $plato-table_body_hover_background;
+		}
+	}
+}

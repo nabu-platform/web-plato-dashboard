@@ -1,0 +1,27 @@
+.nabu-cms.nabu-cms-core-login {
+	@extend %plato-card;
+	margin: 4rem auto 0;
+	max-width: 32rem;
+	.n-form {
+		.n-form-content {
+			footer {
+				display: flex;
+				flex-flow: row wrap;
+				a.forgot {
+					@include button-generator($style: "ghost");
+				}
+				button, .button, a.forgot {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+
+@include media("<=34rem") {
+	.nabu-cms.nabu-cms-core-login {
+		margin: 2rem auto;
+		max-width: calc(100vw - 2rem);
+	}
+}

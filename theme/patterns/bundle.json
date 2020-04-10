@@ -6,6 +6,17 @@
         },
         "card.scss": {
             "url": "card.scss"
+        },
+        "mappings.scss": {
+            "url": "mappings.scss"
+        },
+        "table.scss": {
+            "url": "table.scss"
+        },
+        "auth": {
+            "login.scss": {
+                "url": "login.scss"
+            }
         }
     }
 }
