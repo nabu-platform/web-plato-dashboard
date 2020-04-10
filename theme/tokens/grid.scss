@@ -1,0 +1,8 @@
+// ---------------------------------------------- grid
+
+.page-row {
+	@include grid-container();
+	&.full-width {
+		max-width: none;
+	}
+}
