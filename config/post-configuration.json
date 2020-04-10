@@ -1,6 +1,14 @@
 {
     "name": "web-plato-dashboard--post-configuration",
 	"resources": {
+        "tokens": {
+            "borders.scss": {
+                "url": "tokens/borders.scss"
+            },
+            "type-scale.scss": {
+                "url": "tokens/type-scale.scss"
+            }
+        },
         "elements": {
             "button-base.scss": {
                 "url": "elements/button-base.scss"
@@ -15,14 +23,6 @@
             },
             "form-form-section.scss": {
                 "url": "patterns/form-form-section.scss"
-            }
-        },
-        "tokens": {
-            "borders.scss": {
-                "url": "tokens/borders.scss"
-            },
-            "type-scale.scss": {
-                "url": "tokens/type-scale.scss"
             }
         }
     }
