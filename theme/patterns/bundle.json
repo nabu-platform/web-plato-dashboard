@@ -12,7 +12,7 @@
         },
         "auth": {
             "login.scss": {
-                "url": "login.scss"
+                "url": "auth/login.scss"
             }
         }
     }
