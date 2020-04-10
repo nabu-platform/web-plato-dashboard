@@ -30,6 +30,10 @@
             }
         },
         "theme": {
+            "tokens.json": {
+                "type": "bundle",
+                "url": "./theme/tokens/bundle.json"
+            },
             "elements.json": {
                 "type": "bundle",
                 "url": "./theme/elements/bundle.json"
@@ -37,6 +41,10 @@
             "patterns.json": {
                 "type": "bundle",
                 "url": "./theme/patterns/bundle.json"
+            },
+            "mapping.json": {
+                "type": "bundle",
+                "url": "./theme/mapping/bundle.json"
             }
         }
     }
