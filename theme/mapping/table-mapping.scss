@@ -1,0 +1,17 @@
+[template="data-table"] table {
+	extends: ".plato-table";
+	@extend %plato-table;
+}
+
+.data-table-list .table-list {
+	extends: ".plato-table";
+	@extend %plato-table;
+	.row.title {
+		@extend %plato-table_row;
+		@extend %plato-table_head_row;
+		> span {
+			@extend %plato-table_cell;
+			@extend %plato-table_head_cell;
+		}
+	}
+}

@@ -1,0 +1,17 @@
+
+.page-actions.menu {
+	extends: ".plato-dashboard-menu-top";
+	@extend %plato-dashboard-menu-top;
+	.page-action {
+		extends: ".menu_item";
+		@extend %plato-dashboard-menu-top_item;
+		.page-action-entry {
+			extends: ".menu_item_label";
+			@extend %plato-dashboard-menu-top_item_label;
+		}
+		.page-actions {
+			extends: ".item_children";
+			@extend %plato-dashboard-menu-top_item_children;
+		}
+	}
+}

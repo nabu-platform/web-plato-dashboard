@@ -1,0 +1,56 @@
+// /// form wrapper
+
+.n-form {
+	@extend %plato-form;
+	.n-form-component {
+		@extend %plato-form_component;
+		.n-form-label-wrapper {
+			@extend %plato-form_component_label-wrapper;
+			.n-form-label {
+				@extend %plato-form_component_label;
+				&:after {
+					display: none;
+				}
+			}
+			.n-form-component-description-info {
+				@extend %plato-form_component_label-info;
+			}
+		}
+		.n-form-input-wrapper {
+			@extend %plato-form_component_field-wrapper;
+			flex: 1;
+			.field {
+				@extend %plato-form_component_field;
+				border-radius: $border-radius;
+				width: 100%;
+			}
+			textarea.field {
+				height: 12rem;
+			}
+		}
+		.n-messages {
+			@extend %plato-form_component_messages;
+			.n-message {
+				@extend %plato-form_component_messages_message;
+				.title {
+					@extend %plato-form_component_messages_message_title;
+				}
+			}
+		}
+	}
+}
+
+.n-form footer {
+	.global-actions {
+		display: flex;
+		flex-flow: row-reverse nowrap;
+		justify-content: flex-end;
+		a.cancel {
+			@include button-generator("primary", "ghost");
+			text-transform: inherit;
+		}
+		button, .button, a.cancel {
+			margin-bottom: 0;
+		}
+	}
+}

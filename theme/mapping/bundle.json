@@ -1,0 +1,14 @@
+{
+    "name": "web-plato-dashboard--theme--mapping",
+	"resources": {
+        "form-mapping.scss": {
+            "url": "form-mapping.scss"
+        },
+        "actions-mapping.scss": {
+            "url": "actions-mapping.scss"
+        },
+        "table-mapping.scss": {
+            "url": "table-mapping.scss"
+        }
+    }
+}
