@@ -1,2 +1,14 @@
 // ---------------------------------------------- button-base
-// TODO
+
+$button-font-size: $font-size-base;
+$button-height: 2rem;
+$button-height-small: 1.6rem;
+$button-height-large: 2.5rem;
+
+$button-border-radius: $border-radius;
+
+$button-padding-top: 0;
+$button-padding-bottom: 0;
+$button-padding-left: 0.75rem; // spacing("sm")
+$button-padding-right: 0.75rem; // spacing("sm")
+$button-padding-icon: 2rem; // spacing("l")
