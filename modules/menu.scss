@@ -1,0 +1,191 @@
+// ---------------------------------------------- apollo menu
+$apollo-menu_background: color-tint("secondary", "base");
+
+/// menu item
+$apollo-menu_item_background: color-tint("secondary", "dark");
+$apollo-menu_item_color: $color-neutral-white;
+$apollo-menu_item_border: $border;
+$apollo-menu_item_font-size: $font-size-small;
+$apollo-menu_item_font-weight: $font-weight;
+$apollo-menu_item_height: spacing("xxl");
+/// menu item - active
+$apollo-menu_item_active_background: color-tint("secondary", "darker");
+$apollo-menu_item_active_color: $apollo-menu_item_color;
+$apollo-menu_item_active_font-weight: $font-weight-emphasis;
+
+/// expand
+$apollo-menu_expand_breakpoint: "medium";
+/// expand - item 
+$apollo-menu_expand_item_height: 4.5rem;
+$apollo-menu_expand_item_margin: 0 1.6rem;
+/// expand - item - icon
+$apollo-menu_expand_item_icon_margin: 1.6rem 1.2rem 1.6rem 0;
+
+.apollo-menu {
+	justify-content: center;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+	.page-actions {
+		align-items: center;
+		background-color: $apollo-menu_background;
+		display: flex;
+		flex-flow: row nowrap;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		.page-action {
+			flex: 1;
+			.page-action-entry {
+				color: $apollo-menu_item_color;
+				display: flex;
+				flex-flow: column nowrap;
+				font-size: 1.06666667rem;
+				font-weight: 400;
+				justify-content: center;
+				height: $apollo-menu_item_height;
+				text-decoration: none;
+				.fa {
+					display: block;
+					margin: 0.1rem auto 0.3rem;
+					+ span {
+						display: block;
+					}
+				}
+			}
+			.page-action-entry.active {
+				background-color: $apollo-menu_item_active_background;
+				font-weight: $apollo-menu_item_active_font-weight;
+			}
+		}
+	}
+	.offline-overlay {
+		background-color: rgba(255, 255, 255, 0.6);
+		height: $apollo-menu_item_height;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100vw;
+		z-index: 10000;
+	}
+}
+
+@include media("<=#{$apollo-menu_expand_breakpoint}") {
+	.apollo-menu-skeleton {
+		> .page-rows {
+			> *:not(.apollo-menu) {
+				padding-bottom: 6rem;
+			}
+			.apollo-menu {
+				.page-logo {
+					display: none;
+				}
+				.logout-container {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@include media(">#{$apollo-menu_expand_breakpoint}") {
+	.apollo-menu-skeleton {
+		min-height: 100vh;
+		> .page-rows {
+			display: flex;
+			flex-flow: row nowrap;
+			min-height: 100vh;
+			> *:not(.apollo-menu) {
+				flex: 1;
+				max-height: 100vh;
+				overflow: auto;
+				width: 100%;
+				max-width: none;
+			}
+			.apollo-menu {
+				background-color: $apollo-menu_background;
+				display: flex;
+				flex-flow: column nowrap;
+				min-height: 100%;
+				max-height: 100vh;
+				order: -1;
+				position: static;
+				width: 16rem;
+				.page-logo {
+					padding: 2rem 0;
+					.page-image {
+						margin: 0 auto;
+						width: 12rem;
+					}
+				}
+				.page-actions {
+					background-color: transparent;
+					display: block;
+					text-align: left;
+					.page-action {
+						.page-action-entry {
+							align-items: center;
+							border-bottom: none; //$apollo-menu_item_border;
+							color: #a7b1c2; //todo - add to colors somewhere
+							display: flex;
+							flex-flow: row nowrap;
+							font-size: $apollo-menu_item_font-size;
+							height: auto; //$apollo-menu_expand_item_height;
+							margin: 0;
+							padding: 1rem 1.25rem;
+							padding-left: 1.5rem;
+							.icon {
+								margin: 0 0.5rem 0 0.25rem; //$apollo-menu_expand_item_icon_margin;
+								text-align: center;
+								width: 1rem;
+							}
+							*:not(.icon) {
+								flex: 1;
+								margin-top: 0;
+							}
+							&:hover {
+								background-color: color-tint("secondary", "dark");
+								color: $color-neutral-white;
+							}
+						}
+						&.is-open {
+							.page-action-entry {
+								background-color: color-tint("secondary", "dark"); //$apollo-menu_item_active_background;
+								color: $color-neutral-white; //$apollo-menu_item_active_color;
+							}
+						}
+						&.has-children.is-open {
+							border-left: 4px solid color-tint("primary", "base");
+							.page-action-entry {
+								padding-left: calc(1.5rem - 4px);
+							}
+							.page-actions .page-action {
+								.page-action-entry {
+									font-size: $font-size-tiny;
+									padding-left: 3rem;
+									width: calc(100% - 4px);
+									.icon {
+										font-size: $font-size-tiny;
+									}
+								}
+							}
+						}
+					}
+				}
+				.offline-overlay {
+					height: 100vh;
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 20rem;
+				}
+			}
+		}
+	}
+	.apollo-menu-skeleton.edit {
+		.offline-overlay {
+			display: none;
+		}
+	}
+}

@@ -46,6 +46,20 @@
                 "type": "bundle",
                 "url": "./theme/mapping/bundle.json"
             }
+        },
+        "modules": {
+            "actions.scss": {
+                "url": "./modules/actions.scss"
+            },
+            "header.scss": {
+                "url": "./modules/header.scss"
+            },
+            "menu.scss": {
+                "url": "./modules/menu.scss"
+            },
+            "wizard.scss": {
+                "url": "./modules/wizard.scss"
+            }
         }
     }
 }

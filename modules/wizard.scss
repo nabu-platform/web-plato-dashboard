@@ -1,0 +1,14 @@
+.wizard_container {
+	.n-prompt .n-prompt-content {
+		padding: 0;
+		min-width: 40rem;
+		@include media("<=42rem") {
+			min-width: auto;
+			width: calc(100vw - 2rem);
+		}
+	}
+	.wizard-step {
+		background-color: color-tint("neutral", "lightest");
+		padding: 1rem;
+	}
+}

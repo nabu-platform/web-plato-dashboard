@@ -1,0 +1,12 @@
+
+
+.apollo-header {
+	@include layer-level("low");
+	background-color: $color-neutral-white;
+	padding: 1rem 2rem;
+	.apollo-header_title {
+		color: color-tint("primary", "dark");
+		font-weight: $font-weight-subheading;
+		margin: 0;
+	}
+}
