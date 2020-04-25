@@ -15,6 +15,8 @@ $plato-table_body_border: $border-width-light $border-style-light $color-neutral
 $plato-table_body_hover_background: darken($color-neutral-lightest, 2);
 //// body - striped 
 $plato-table_body_striped_background: $color-neutral-lightest;
+//// body - selected 
+$plato-table_body_selected_background: $color-neutral-lighter;
 //// body - actions 
 ///// body - actions - label
 $plato-table_body_actions_label_color: $font-color-light;
@@ -75,6 +77,12 @@ $plato-table_body_actions_icon_color: color-tint("primary", "base");
 						}
 					}
 				}
+			}
+		}
+		&.selected, %plato-table_body_row_selected {
+			td,
+			.plato-table_body_cell, %plato-table_body_cell {
+				background: $plato-table_body_selected_background;
 			}
 		}
 		&:first-child {

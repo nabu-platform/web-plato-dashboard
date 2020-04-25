@@ -1,6 +1,51 @@
-[template="data-table"] table {
-	extends: ".plato-table";
-	@extend %plato-table;
+[template="data-table"], [template="data-table-list"] {
+	.no-data {
+	    margin: 2rem auto;
+		padding: 4rem;
+		text-align: center;
+	}
+	table {
+		extends: ".plato-table";
+		@extend %plato-table;
+	}
+	.data-common-header {
+		.data-combo-filter {
+			.combo-filter-tags {
+				align-items: center;
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: flex-start;
+				margin: 0.25rem -0.25rem;
+				.combo-filter-tag {
+					@include layer-level("low");
+					background-color: color-tint("neutral", "lightest");
+					display: flex;
+					flex-flow: row nowrap;
+					margin: 0.25rem;
+					padding: 0.75rem;
+					.key {
+						margin-right: 0.25rem;
+						order: -1;
+						&:after {
+							content: ":";
+						}
+					}
+					.fa {
+						cursor: pointer;
+						font-size: $font-icon-size;
+						margin: -0.75rem;
+						margin-left: 0.25rem;
+						padding: 0.5rem;
+						transition: all 0.2s ease-out;
+						&:hover {
+							background-color: color-tint("danger", "dark");
+							color: color-tint("neutral", "lightest");
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 .data-table-list .table-list {

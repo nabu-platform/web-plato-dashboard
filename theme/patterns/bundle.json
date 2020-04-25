@@ -1,6 +1,6 @@
 {
     "name": "web-plato-dashboard--theme--patterns",
-	"resources": {
+    "resources": {
         "menu-top.scss": {
             "url": "menu-top.scss"
         },

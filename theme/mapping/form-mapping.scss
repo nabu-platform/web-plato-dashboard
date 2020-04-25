@@ -28,6 +28,11 @@
 				height: 12rem;
 			}
 		}
+		.n-form-component-after {
+			color: color-tint("neutral", "light");
+			font-size: $font-size-small;
+			margin-top: 0.25rem;
+		}
 		.n-messages {
 			@extend %plato-form_component_messages;
 			.n-message {
@@ -51,6 +56,26 @@
 		}
 		button, .button, a.cancel {
 			margin-bottom: 0;
+		}
+	}
+}
+
+
+
+
+
+/// date 
+
+.n-form-date {
+	.n-form-input-wrapper {
+		align-items: center;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: center;
+		.n-form-date-icon {
+			border-radius: 0 $border-radius $border-radius 0;
+			flex: none;
+			margin-left: calc(-1 * #{$border-radius});
 		}
 	}
 }
