@@ -1,6 +1,6 @@
 {
     "name": "web-plato-dashboard--post-configuration",
-	"resources": {
+    "resources": {
         "tokens": {
             "borders.scss": {
                 "url": "tokens/borders.scss"
