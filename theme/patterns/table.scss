@@ -18,6 +18,7 @@ $plato-table_body_striped_background: $color-neutral-lightest;
 //// body - selected 
 $plato-table_body_selected_background: $color-neutral-lighter;
 //// body - actions 
+$plato-table_body_actions_align: right;
 ///// body - actions - label
 $plato-table_body_actions_label_color: $font-color-light;
 $plato-table_body_actions_label_font-size: $font-size-small;
@@ -60,6 +61,7 @@ $plato-table_body_actions_icon_color: color-tint("primary", "base");
 		.plato-table_body_cell, %plato-table_body_cell {
 			border-top: $plato-table_body_border;
 			&.actions, %plato-table_body_actions {
+				text-align: $plato-table_body_actions_align;
 				button {
 					&.has-icon.inline {
 						background: $plato-table_body_actions_icon_background;
