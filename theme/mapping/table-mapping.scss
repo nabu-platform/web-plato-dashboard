@@ -46,6 +46,14 @@
 			}
 		}
 	}
+	.n-paging {
+		margin: 1rem auto;
+		text-align: center;
+		button.n-paging-page {
+			@include button-generator($color: "secondary");
+			margin: 0 0.5rem 0 0;
+		}
+	}
 }
 
 .data-table-list .table-list {
