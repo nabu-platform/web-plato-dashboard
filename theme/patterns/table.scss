@@ -16,7 +16,7 @@ $plato-table_body_hover_background: darken($color-neutral-lightest, 2);
 //// body - striped 
 $plato-table_body_striped_background: $color-neutral-lightest;
 //// body - selected 
-$plato-table_body_selected_background: $color-neutral-lighter;
+$plato-table_body_selected_background: color-tint("primary", "light");
 //// body - actions 
 $plato-table_body_actions_align: right;
 ///// body - actions - label
@@ -55,7 +55,7 @@ $plato-table_body_actions_icon_color: color-tint("primary", "base");
 	}
 	tbody tr,
 	.plato-table_body .plato-table_body_row, %plato-table_body %plato-table_body_row,
-	.plato-table_body_row, %plato-table_body_row { // row in the body, with and without thead
+	.plato-table_body_row, %plato-table_body_row { // row in the body, with and without tbody
 		cursor: pointer;
 		td,
 		.plato-table_body_cell, %plato-table_body_cell {
@@ -98,6 +98,16 @@ $plato-table_body_actions_icon_color: color-tint("primary", "base");
 		}
 		&:hover {
 			background: $plato-table_body_hover_background;
+		}
+	}
+	&.centered {
+		tbody tr,
+		.plato-table_body .plato-table_body_row, %plato-table_body %plato-table_body_row,
+		.plato-table_body_row, %plato-table_body_row { // row in the body, with and without tbody
+			td,
+			.plato-table_body_cell, %plato-table_body_cell {
+				text-align: center;
+			}
 		}
 	}
 }
