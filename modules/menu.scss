@@ -9,7 +9,7 @@ $apollo-menu_item_font-size: $font-size-small;
 $apollo-menu_item_font-weight: $font-weight;
 $apollo-menu_item_height: spacing("xxl");
 /// menu item - active
-$apollo-menu_item_active_background: color-tint("secondary", "darker");
+$apollo-menu_item_active_background: color-tint("secondary", "darkest");
 $apollo-menu_item_active_color: $apollo-menu_item_color;
 $apollo-menu_item_active_font-weight: $font-weight-emphasis;
 
@@ -145,19 +145,40 @@ $apollo-menu_expand_item_icon_margin: 1.6rem 1.2rem 1.6rem 0;
 								flex: 1;
 								margin-top: 0;
 							}
-							&:hover {
+							&:hover, &.active {
 								background-color: color-tint("secondary", "dark");
 								color: $color-neutral-white;
 							}
+							&.active {
+								background-color: color-tint("secondary", "darker");
+								.icon {
+									font-size: $font-size-small;
+								}
+							}
 						}
 						&.is-open {
-							.page-action-entry {
+							.page-action-entry:not(.active) {
 								background-color: color-tint("secondary", "dark"); //$apollo-menu_item_active_background;
 								color: $color-neutral-white; //$apollo-menu_item_active_color;
 							}
 						}
+						&.has-children {
+							&:after {
+								content: "\f054";
+								color: #a7b1c2; //todo - add to colors somewhere
+								font-family: $icon-family;
+								font-weight: $icon-weight;
+								position: absolute;
+								right: 1rem;
+								top: 1rem;
+							}
+						}
 						&.has-children.is-open {
-							border-left: 4px solid color-tint("primary", "base");
+							border-left: 4px solid color-tint("primary", "base"); // $apollo-menu_item_active_border;
+							&:after {
+								color: $color-neutral-white; //$apollo-menu_item_active_color;
+								content: "\f078";
+							}
 							.page-action-entry {
 								padding-left: calc(1.5rem - 4px);
 							}
@@ -166,13 +187,21 @@ $apollo-menu_expand_item_icon_margin: 1.6rem 1.2rem 1.6rem 0;
 									font-size: $font-size-tiny;
 									padding-left: 3rem;
 									width: calc(100% - 4px);
+								}
+								.page-action-entry:not(.active) {
 									.icon {
 										font-size: $font-size-tiny;
 									}
 								}
+								&.has-children.is-open {
+									border-left: none;
+								}
 							}
 						}
 					}
+				}
+				> .page-action.active {
+					border-left: 4px solid color-tint("primary", "base"); // $apollo-menu_item_active_border;
 				}
 				.offline-overlay {
 					height: 100vh;
