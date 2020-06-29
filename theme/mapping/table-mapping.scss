@@ -1,4 +1,8 @@
 [template="data-table"], [template="data-table-list"] {
+	.data-table, .data-table-list {
+		display: flex;
+		flex-flow: column nowrap;
+	}
 	.no-data {
 	    margin: 2rem auto;
 		padding: 4rem;
@@ -10,6 +14,7 @@
 	}
 	.data-common-header {
 		.data-combo-filter {
+			max-width: 32rem;
 			.combo-filter-tags {
 				align-items: center;
 				display: flex;
@@ -45,6 +50,9 @@
 					}
 				}
 			}
+			.combo-filter > button:last-child {
+				margin: 0.5rem;
+			}
 		}
 	}
 	.n-paging {
@@ -53,6 +61,22 @@
 		button.n-paging-page {
 			@include button-generator($color: "secondary");
 			margin: 0 0.5rem 0 0;
+		}
+	}
+	.data-common-footer {
+		order: -1;
+		position: relative;
+		.global-actions {
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: flex-end;
+			position: absolute;
+			right: 0;
+			button {
+				&:not(:first-child) {
+					margin-right: 0;
+				}
+			}
 		}
 	}
 }
