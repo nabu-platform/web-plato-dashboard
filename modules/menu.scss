@@ -82,8 +82,32 @@ $apollo-menu_expand_item_icon_margin: 1.6rem 1.2rem 1.6rem 0;
 				.page-logo {
 					display: none;
 				}
+				.apollo-menu.page-actions {
+					width: calc(100vw - 2rem);
+				}
 				.logout-container {
 					display: none;
+				}
+				.mobile-overflow-container {
+					background-color: $apollo-menu_background;
+					display: block;
+					position: fixed;
+					bottom: 0;
+					right: 0;
+					z-index: 1000;
+					.page-actions {
+						background-color: transparent;
+						padding: 0 1rem;
+						.page-action.has-children.is-open {
+							display: flex;
+							flex-flow: column-reverse nowrap;
+						}
+					}
+				}
+			}
+			.apollo-menu.no-overflow-container {
+				.apollo-menu.page-actions {
+					width: 100%;
 				}
 			}
 		}
@@ -202,6 +226,9 @@ $apollo-menu_expand_item_icon_margin: 1.6rem 1.2rem 1.6rem 0;
 				}
 				> .page-action.active {
 					border-left: 4px solid color-tint("primary", "base"); // $apollo-menu_item_active_border;
+				}
+				.mobile-overflow-container {
+					display: none;
 				}
 				.offline-overlay {
 					height: 100vh;
