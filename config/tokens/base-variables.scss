@@ -1,18 +1,18 @@
 // ---------------------------------------------- font
 
-$font-color: $color-neutral-dark;
-$font-size-base: 0.875rem;
-$font-family: "open-sans", sans-serif;
-$font-family-alt: $font-family;
+$font-color: $color-neutral-dark !default;
+$font-size-base: 0.875rem !default;
+$font-family: "open-sans", sans-serif !default;
+$font-family-alt: $font-family !default;
 
 $font-weight: 400 !default;
 $font-weight-emphasis: 600 !default;
 $font-weight-light: 300 !default;
 
-$font-icon-family: "Font Awesome 5 Pro";
-$font-icon-size: 24px;
-$font-icon-weight: normal;
-$font-icon-content-invalid: "\f00d";
-$font-icon-content-valid: "\f00c";
-$font-icon-content-error: "\f06a";
-$font-icon-content-success: "\f058";
+$font-icon-family: "Font Awesome 5 Pro" !default;
+$font-icon-size: 24px !default;
+$font-icon-weight: normal !default;
+$font-icon-content-invalid: "\f00d" !default;
+$font-icon-content-valid: "\f00c" !default;
+$font-icon-content-error: "\f06a" !default;
+$font-icon-content-success: "\f058" !default;
