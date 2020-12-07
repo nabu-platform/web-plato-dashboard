@@ -1,3 +1,70 @@
+.data-common-header {
+	.data-combo-filter {
+		max-width: 32rem;
+		.combo-filter-tags {
+			align-items: center;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: flex-start;
+			margin: 0.25rem -0.25rem;
+			.combo-filter-tag {
+				@include layer-level("low");
+				background-color: color-tint("neutral", "lightest");
+				display: flex;
+				flex-flow: row nowrap;
+				margin: 0.25rem;
+				padding: 0.75rem;
+				z-index: auto;
+				.key {
+					margin-right: 0.25rem;
+					order: -1;
+					&:after {
+						content: ":";
+					}
+				}
+				.fa {
+					cursor: pointer;
+					font-size: $font-icon-size;
+					margin: -0.75rem;
+					margin-left: 0.25rem;
+					padding: 0.5rem;
+					transition: all 0.2s ease-out;
+					&:hover {
+						background-color: color-tint("danger", "dark");
+						color: color-tint("neutral", "lightest");
+					}
+				}
+			}
+		}
+		.combo-filter > button:last-child {
+			margin: 0.5rem;
+		}
+	}
+}
+.n-paging {
+	margin: 1rem auto;
+	text-align: center;
+	button.n-paging-page {
+		@include button-generator($color: "secondary");
+		margin: 0 0.5rem 0 0;
+	}
+}
+.data-common-footer {
+	order: -1;
+	position: relative;
+	.global-actions {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-end;
+		position: absolute;
+		right: 0;
+		button {
+			&:not(:first-child) {
+				margin-right: 0;
+			}
+		}
+	}
+}
 [template="data-table"], [template="data-table-list"] {
 	.data-table, .data-table-list {
 		display: flex;
@@ -11,73 +78,6 @@
 	table {
 		extends: ".plato-table";
 		@extend %plato-table;
-	}
-	.data-common-header {
-		.data-combo-filter {
-			max-width: 32rem;
-			.combo-filter-tags {
-				align-items: center;
-				display: flex;
-				flex-flow: row wrap;
-				justify-content: flex-start;
-				margin: 0.25rem -0.25rem;
-				.combo-filter-tag {
-					@include layer-level("low");
-					background-color: color-tint("neutral", "lightest");
-					display: flex;
-					flex-flow: row nowrap;
-					margin: 0.25rem;
-					padding: 0.75rem;
-					z-index: auto;
-					.key {
-						margin-right: 0.25rem;
-						order: -1;
-						&:after {
-							content: ":";
-						}
-					}
-					.fa {
-						cursor: pointer;
-						font-size: $font-icon-size;
-						margin: -0.75rem;
-						margin-left: 0.25rem;
-						padding: 0.5rem;
-						transition: all 0.2s ease-out;
-						&:hover {
-							background-color: color-tint("danger", "dark");
-							color: color-tint("neutral", "lightest");
-						}
-					}
-				}
-			}
-			.combo-filter > button:last-child {
-				margin: 0.5rem;
-			}
-		}
-	}
-	.n-paging {
-		margin: 1rem auto;
-		text-align: center;
-		button.n-paging-page {
-			@include button-generator($color: "secondary");
-			margin: 0 0.5rem 0 0;
-		}
-	}
-	.data-common-footer {
-		order: -1;
-		position: relative;
-		.global-actions {
-			display: flex;
-			flex-flow: row nowrap;
-			justify-content: flex-end;
-			position: absolute;
-			right: 0;
-			button {
-				&:not(:first-child) {
-					margin-right: 0;
-				}
-			}
-		}
 	}
 }
 
