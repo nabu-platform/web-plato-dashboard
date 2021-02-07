@@ -1,13 +1,13 @@
 .data-common-header {
-	.data-combo-filter {
+	.data-combo-filter, .data-filter-default {
 		max-width: 32rem;
-		.combo-filter-tags {
+		.combo-filter-tags, .default-filter-tags {
 			align-items: center;
 			display: flex;
 			flex-flow: row wrap;
 			justify-content: flex-start;
 			margin: 0.25rem -0.25rem;
-			.combo-filter-tag {
+			.combo-filter-tag, .default-filter-tag {
 				@include layer-level("low");
 				background-color: color-tint("neutral", "lightest");
 				display: flex;
