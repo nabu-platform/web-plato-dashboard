@@ -57,7 +57,8 @@
 		flex-flow: row nowrap;
 		justify-content: flex-end;
 		position: absolute;
-		right: 0;
+		// we want to be able to put the "reload" icon next to it
+		right: 0.7rem;
 		button {
 			&:not(:first-child) {
 				margin-right: 0;
