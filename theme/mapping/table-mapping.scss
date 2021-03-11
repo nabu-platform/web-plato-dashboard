@@ -70,12 +70,21 @@
 			display: flex;
 			flex-flow: row nowrap;
 			justify-content: flex-end;
+			margin: -0.5rem;
 			position: absolute;
 			right: 0;
 			button {
 				&:not(:first-child) {
 					margin-right: 0;
 				}
+			}
+		}
+	}
+	.data-common-header ~ .data-common-footer {
+		@include media("<tablet") {
+			padding: 1rem;
+			.global-actions {
+				top: 0;
 			}
 		}
 	}

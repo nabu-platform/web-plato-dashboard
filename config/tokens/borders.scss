@@ -1,13 +1,13 @@
 // ---------------------------------------------- borders
 
-$border-color: $color-neutral-base;
+$border-color: $color-neutral-base !default;
 
-$border-color-light: $color-neutral-lighter;
+$border-color-light: $color-neutral-lighter !default;
 
 
 // ---------------------------------------------- border radius
-$border-radius-none: none;
-$border-radius-light: 0.25rem;
-$border-radius-heavy: 0.5rem;
+$border-radius-none: none !default;
+$border-radius-light: 0.25rem !default;
+$border-radius-heavy: 0.5rem !default;
 
-$border-radius: $border-radius-light;
+$border-radius: $border-radius-light !default;
